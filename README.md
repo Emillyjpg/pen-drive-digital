@@ -50,7 +50,7 @@ Configuração do arquivo **smb.conf** para gerenciar permissões e controlar qu
 
 ### 5. Dashboard de Gerenciamento
 Com o OpenMediaVault ou TrueNAS, é possível administrar o servidor via interface gráfica, facilitando tarefas como criação e exclusão de usuários, gerenciamento de permissões, monitoramento de consumo de armazenamento e criação de backups.
-![Dashboard do Servidor](imagens/dashboard.png)
+![Dashboard do Servidor](DashBord.jpg)
 
 ### 6. Segurança e Políticas
 Autenticação obrigatória via login e senha. Termo de uso definido para evitar armazenamento de mídias não didáticas. Possibilidade de integração com Active Directory (AD) para ambientes maiores. Backup planejado com RAID e cópias externas, garantindo integridade e segurança dos dados.
@@ -60,24 +60,9 @@ Acesso remoto via FTP ou VPN para administração e uso à distância. Integraç
 
 ### 8. Exemplos Visuais
 Adicione prints reais da implementação para ilustrar a estrutura e configuração:
-![Estrutura de Pastas](imagens/pastas.png)
-![Configuração Samba](imagens/samba.png)
-![Compartilhamento de Arquivos](imagens/compartilhamento.png)
+![Estrutura de Pastas](Esquema_de_Pastas.jpg)
+![Configuração Samba](Print_SAMBA.png)
+![Compartilhamento de Arquivos](compartilhamento.png)
 
-### 9. Guia Rápido de Instalação
-Atualizar o sistema, instalar o Samba, criar diretórios e usuários, configurar permissões e reiniciar o serviço:
-sudo apt update && sudo apt upgrade -y  
-sudo apt install samba  
-mkdir -p /home/servidor/Compartilhado  
-mkdir -p /home/servidor/Alunos/aluno01  
-sudo adduser aluno01  
-sudo smbpasswd -a aluno01  
-sudo systemctl restart smbd
-
-### 10. Acessar via rede no Windows
-Para acessar o servidor a partir de um computador Windows, utilize o endereço de rede do compartilhamento:
-\\ip-do-servidor\Compartilhado
 
 📌 Este repositório demonstra a implementação prática de um servidor de arquivos em rede, com foco em segurança, organização e escalabilidade.
-
----
